@@ -9,7 +9,9 @@
     "build": "rimraf dist && node build/build.js"
   },
   "dependencies": {
+    {{#elementUI}}
     "element-ui": "^2.4.11",
+    {{/elementUI}}
     "flyio": "^0.6.6",
     "vue": "^2.5.2",
     "vue-router": "^3.0.1",

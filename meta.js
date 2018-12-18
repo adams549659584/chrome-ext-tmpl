@@ -51,6 +51,10 @@ module.exports = {
       type: 'string',
       message: 'Author',
     },
+    elementUI:{
+      "type": "confirm",
+      "message": "Install element-ui?"
+    },
     autoInstall: {
       when: 'isNotTest',
       type: 'list',
