@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div>
     popup
     <hello-world></hello-world>
   </div>
