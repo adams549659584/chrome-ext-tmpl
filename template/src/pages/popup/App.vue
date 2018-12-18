@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="container">
     popup
     <hello-world></hello-world>
   </div>
@@ -21,4 +21,8 @@ export default {
 </script>
 
 <style scoped>
+.container {
+  width: 400px;
+  text-align: center;
+}
 </style>
