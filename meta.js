@@ -49,15 +49,15 @@ module.exports = {
     author: {
       when: 'isNotTest',
       type: 'string',
-      message: 'Author',
+      message: '作者',
     },
     router:{
       type: "confirm",
-      message: "Install vue-router?"
+      message: "安装 vue-router?"
     },
     elementUI:{
       type: "confirm",
-      message: "Install element-ui?"
+      message: "安装 element-ui?"
     },
     autoInstall: {
       when: 'isNotTest',
