@@ -51,9 +51,13 @@ module.exports = {
       type: 'string',
       message: 'Author',
     },
+    router:{
+      type: "confirm",
+      message: "Install vue-router?"
+    },
     elementUI:{
-      "type": "confirm",
-      "message": "Install element-ui?"
+      type: "confirm",
+      message: "Install element-ui?"
     },
     autoInstall: {
       when: 'isNotTest',
@@ -75,6 +79,7 @@ module.exports = {
     },
   },
   filters: {
+    "src/router/**/*": "router"
   },
   complete: function(data, { chalk }) {
     const green = chalk.green
