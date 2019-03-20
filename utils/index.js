@@ -78,7 +78,7 @@ To get started:
     )}${lintMsg(data)}yarn dev`
   )}
   
-相关文档及源码可查看 https://github.com/adams549659584/chrome-ext-tmpl
+相关文档及源码可查看 https://github.com/adams549659584/kad-vue-tmpl
 `
   console.log(message)
 }

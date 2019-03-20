@@ -11,7 +11,9 @@ const pkg = require('./package.json')
 
 const templateVersion = pkg.version
 
-const { addTestAnswers } = require('./scenarios')
+const {
+  addTestAnswers
+} = require('./scenarios')
 
 module.exports = {
   metalsmith: {
@@ -31,7 +33,7 @@ module.exports = {
       return templateVersion
     },
   },
-  
+
   prompts: {
     name: {
       when: 'isNotTest',
@@ -44,28 +46,28 @@ module.exports = {
       type: 'string',
       required: false,
       message: '项目描述',
-      default: '基于Vue的谷歌扩展模板',
+      default: '基于Vue的 Kad2.0 Wap 项目模板',
     },
     author: {
       when: 'isNotTest',
       type: 'string',
       message: '作者',
     },
-    router:{
-      type: "confirm",
-      message: "安装 vue-router?"
+    siteId: {
+      when: 'isNotTest',
+      type: 'string',
+      message: '项目对应站点siteId',
     },
-    elementUI:{
-      type: "confirm",
-      message: "安装 element-ui?"
+    cmsViewName: {
+      when: 'isNotTest',
+      type: 'string',
+      message: '项目对应的cms页面名称',
     },
     autoInstall: {
       when: 'isNotTest',
       type: 'list',
-      message:
-        'Should we run `yarn install` for you after the project has been created? (recommended)',
-      choices: [
-        {
+      message: 'Should we run `yarn install` for you after the project has been created? (recommended)',
+      choices: [{
           name: 'Yes, use Yarn',
           value: 'yarn',
           short: 'yarn',
@@ -78,10 +80,9 @@ module.exports = {
       ],
     },
   },
-  filters: {
-    "src/router/**/*": "router"
-  },
-  complete: function(data, { chalk }) {
+  complete: function (data, {
+    chalk
+  }) {
     const green = chalk.green
 
     sortDependencies(data, green)

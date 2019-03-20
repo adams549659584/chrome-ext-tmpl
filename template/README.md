@@ -1,37 +1,44 @@
-# my-chrome-ext-template
+# {{name}}
 
-> 基于Vue的谷歌扩展模板
-
-## Build Setup
-
-``` bash
-# 初始化
-yarn
-
-# 调试
-yarn dev
-
-# build for production with minification
-yarn build
-
-# 预览插件
-
-> 1.chrome://extensions/ 
-
-> 2.加载已解压的扩展程序
-
-> 3.指向项目dist目录
-
-# 打包扩展程序
-
-> 1.chrome://extensions/ 
-
-> 2.打包扩展程序
-
-> 3.选择项目dist目录，选填私钥
-
-> 4.打包
+## Project setup
 
 ```
+yarn install
+```
 
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+### Compiles and hot-reloads for development
+
+```
+yarn run serve
+```
+
+### Compiles and minifies for production
+
+```
+yarn run build
+```
+
+### Run your tests
+
+```
+yarn run test
+```
+
+### Lints and fixes files
+
+```
+yarn run lint
+```
+
+### .env 配置对应不同环境
+
+```
+# 环境文件只包含环境变量的“键=值”
+# 只有以 VUE_APP_ 开头的变量会被 webpack.DefinePlugin 静态嵌入到客户端侧的包中,可在代码中访问
+# NODE_ENV 应用运行的模式
+# VUE_APP_DEPLOY_ENV 发布环境 dev tst rc prod
+```
+
+### Customize configuration
+
+See [Configuration Reference](https://cli.vuejs.org/config/).
